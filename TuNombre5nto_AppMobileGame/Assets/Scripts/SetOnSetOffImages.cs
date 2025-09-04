@@ -5,6 +5,8 @@ using UnityEngine.Rendering;
 
 public class SetOnSetOffImages : MonoBehaviour
 {
+    //hacer toda la talacha de hacerlos gameobjects con spriterenderer 
+    // modificar mi script para que sean gameobjects con sprites
     #region Variables 
 
     #region Variables Cats Image ElementsUI 
@@ -61,7 +63,7 @@ public class SetOnSetOffImages : MonoBehaviour
     #endregion Variables Things Image ElementUI
 
     #region scripts heredables
-    public ButtonsGameManager script_ButtonsGameManager;
+    [SerializeField] public ButtonsGameManager script_ButtonsGameManager;
 
     #endregion scripts heredables
 
@@ -72,34 +74,38 @@ public class SetOnSetOffImages : MonoBehaviour
     #endregion Variables
 
     #region Public Unity Methods
-    void Start()
-    {
+    //void Start()
+    //{
 
-    }
-    void Update()
-    {
+    //}
+    //void Update()
+    //{
 
-    }
+    //}
     #endregion Public Unity Methods
 
     #region Private Methods
 
     #region Corutine Activation
 
-    IEnumerator BlinkHappyness(Image image, float interval)
+    IEnumerator BlinkHappyness(Image image, float interval = 3.33f)
     {
+        Debug.LogWarning("pregunto si no es igual a mi imagen activada o desactivada");
         image.enabled = !image.enabled;
+        Debug.LogWarning("ejecuto el regreso de mis segundos de mi intervalo de 3.33f");
         yield return new WaitForSeconds(interval);
         // si quiero hacer que parpadie tantas veces implementar un ciclo for que inicie en 0 hasta cuantas veces max.
         // recuerda usar tu image indicado activado y un yield return new waitingforseconds y el tiempo
         // hacerlo de nuevo para desactivarlo
         // no se igual y no :/
+        Debug.LogWarning("Entro mi mi ciclo y ejecturara 3 veces de activar y desactivar mi imagen en tantos segundos ");
         for (int i = 0; i < 3; i++)
         {
+            Debug.LogWarning("Entro al ciclo ?");
             image_Happy_Yellow_Cat.enabled = true;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(interval);
             image_Happy_Yellow_Cat.enabled = false;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(3.33f);
         }
         image_Happy_Yellow_Cat.enabled = true;
     }
@@ -112,10 +118,14 @@ public class SetOnSetOffImages : MonoBehaviour
         image_Food.enabled = false;
 
         // Nikki esta feliz por un tiempo
-        StartCoroutine(BlinkHappyness(image,interval));
+        StartCoroutine(BlinkHappyness(image, interval));
     }
-    void StartBlinkBlinkImage(Image image, float interval)
+    void StartBlinkBlinkImage(Image image, float interval = 3.33f)
     {
+        Debug.Log("Ejecuto BlinkHapyness? ");
+        BlinkHappyness(image, interval);
+        Debug.LogWarning("no?");
+
         //inicia apagado para luego indicarle que empiece en una imagen especifico y tiempo
         StopBlinkBlinkImage();
         blinkBlinkImage_Corutine = StartCoroutine(BlinkHappyness(image, interval));
@@ -155,23 +165,61 @@ public class SetOnSetOffImages : MonoBehaviour
         StartBlinkBlinkImage(image_Happy_Yellow_Cat, 0.5f);
 
     }
-    public void ActivationImageFromFoodButton()
+    #region Cat Yellow 
+    public void ActivationImageFromFoodButton_Yellow_Cat()
     {
         Debug.Log("Food Button activate");
         ShowFoodAndThenBlinkHappyness(image_Food, 3.33f);
         StartBlinkBlinkImage(image_Happy_Yellow_Cat, 0.5f);
 
     }
-    public void ActivationImageFromWaterButton()
+    public void ActivationImageFromWaterButton_Yellow_Cat()
     {
+
         Debug.Log("Water Button activate");
+        ShowFoodAndThenBlinkHappyness(image_Water, 3.33f);
+        StartBlinkBlinkImage(image_Happy_Yellow_Cat, 3.33f);
+
 
     }
-    public void ActivationImageFromSleepButton()
+    public void ActivationImageFromSleepButton_Yellow_Cat()
     {
         Debug.Log("Sleep Button activate");
-
+        ShowFoodAndThenBlinkHappyness(image_Sleeping_Yellow_Cat_1, 1.33f);
+        ShowFoodAndThenBlinkHappyness(image_Sleeping_Yellow_Cat_2, 1.33f);
+        ShowFoodAndThenBlinkHappyness(image_Sleeping_Yellow_Cat_3, 1.33f);
+        StartBlinkBlinkImage(image_Happy_Yellow_Cat, 3.33f);
     }
+    #endregion Cat Yellow
+
+    /* #region Black & White Cat
+
+     public void ActivationImageFromFoodButton_Black_White_Cat()
+     {
+         Debug.Log("Food Button activate");
+         ShowFoodAndThenBlinkHappyness(image_Food, 3.33f);
+         StartBlinkBlinkImage(image_Happy_Black_White_Cat, 0.5f);
+
+     }
+     public void ActivationImageFromWaterButton_Black_White_Cat()
+     {
+
+         Debug.Log("Water Button activate");
+         ShowFoodAndThenBlinkHappyness(image_Water, 3.33f);
+         StartBlinkBlinkImage(image_Happy_Black_White_Cat, 3.33f);
+
+
+     }
+     public void ActivationImageFromSleepButton_Black_White_Cat()
+     {
+         Debug.Log("Sleep Button activate");
+         ShowFoodAndThenBlinkHappyness(image_Sleeping_Black_White_Cat_1, 1.33f);
+         ShowFoodAndThenBlinkHappyness(image_Sleeping_Black_White_Cat_2, 1.33f);
+         ShowFoodAndThenBlinkHappyness(image_Sleeping_Black_White_Cat_3, 1.33f);
+         StartBlinkBlinkImage(image_Happy_Black_White_Cat, 3.33f);
+
+         #endregion Black & White cat*/
+
     #endregion Activation Images
 
     #endregion Public Methods

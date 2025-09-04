@@ -31,9 +31,14 @@ public class ButtonsGameManager : MonoBehaviour
     void Start()
     {
         button_Play.onClick.AddListener(OnPlayPressed);
-        button_Food.onClick.AddListener(OnFoodPressed);
-        button_Water.onClick.AddListener(OnWaterPressed);
-        button_Sleep.onClick.AddListener(OnSleepPressed);
+        // Yellow Cat
+        button_Food.onClick.AddListener(OnFoodPressed_Yellow_Cat);
+        button_Water.onClick.AddListener(OnWaterPressed_Yellow_Cat);
+        button_Sleep.onClick.AddListener(OnSleepPressed_Yellow_Cat);
+        // Black and White Cat
+        /* button_Food.onClick.AddListener(OnFoodPressed_Black_White_Cat);
+         button_Water.onClick.AddListener(OnWaterPressed_Black_White_Cat);
+         button_Sleep.onClick.AddListener(OnSleepPressed_Black_White_Cat);*/
     }
     #endregion Public Unity Methods
 
@@ -43,17 +48,37 @@ public class ButtonsGameManager : MonoBehaviour
     {
         script_SetOnSetOffImages.ActivationImageFromPlayButton();
     }
-    public void OnFoodPressed()
+    #region Yellow Cat
+    public void OnFoodPressed_Yellow_Cat()
     {
-        script_SetOnSetOffImages.ActivationImageFromFoodButton();
+        script_SetOnSetOffImages.ActivationImageFromFoodButton_Yellow_Cat();
     }
-    public void OnWaterPressed()
+    public void OnWaterPressed_Yellow_Cat()
     {
-        script_SetOnSetOffImages.ActivationImageFromWaterButton();
+        script_SetOnSetOffImages.ActivationImageFromWaterButton_Yellow_Cat();
     }
-    public void OnSleepPressed()
+    public void OnSleepPressed_Yellow_Cat()
     {
-        script_SetOnSetOffImages.ActivationImageFromSleepButton();
+        script_SetOnSetOffImages.ActivationImageFromSleepButton_Yellow_Cat();
     }
+    #endregion Yellow Cat
+
+   /* #region Black White Cat
+
+    public void OnFoodPressed_Black_White_Cat()
+    {
+        script_SetOnSetOffImages.ActivationImageFromFoodButton_Yellow_Cat();
+    }
+    public void OnWaterPressed_Black_White_Cat()
+    {
+        script_SetOnSetOffImages.ActivationImageFromWaterButton_Yellow_Cat();
+    }
+    public void OnSleepPressed_Black_White_Cat()
+    {
+        script_SetOnSetOffImages.ActivationImageFromSleepButton_Yellow_Cat();
+    }
+
+    #endregion Black White Cat */
+
     #endregion Public Methods
 }

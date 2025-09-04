@@ -274,7 +274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &41055987
 RectTransform:
   m_ObjectHideFlags: 0
@@ -377,7 +377,6 @@ GameObject:
   - component: {fileID: 74487832}
   - component: {fileID: 74487834}
   - component: {fileID: 74487833}
-  - component: {fileID: 74487835}
   m_Layer: 5
   m_Name: Image_Toy_Stamen_Color_Orange
   m_TagString: Untagged
@@ -442,18 +441,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74487831}
   m_CullTransparentMesh: 1
---- !u!225 &74487835
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74487831}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &87166082
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +452,6 @@ GameObject:
   - component: {fileID: 87166083}
   - component: {fileID: 87166085}
   - component: {fileID: 87166084}
-  - component: {fileID: 87166086}
   m_Layer: 5
   m_Name: Image_Toy_Stamen_Color_Pink
   m_TagString: Untagged
@@ -530,18 +516,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87166082}
   m_CullTransparentMesh: 1
---- !u!225 &87166086
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87166082}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &87378014
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +650,6 @@ GameObject:
   - component: {fileID: 187107373}
   - component: {fileID: 187107372}
   - component: {fileID: 187107371}
-  - component: {fileID: 187107374}
   m_Layer: 5
   m_Name: Image_Happy_Black_White_Cat
   m_TagString: Untagged
@@ -763,18 +736,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187107369}
   m_CullTransparentMesh: 1
---- !u!225 &187107374
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187107369}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &233045392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,6 +994,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236667912}
   m_CullTransparentMesh: 1
+--- !u!1 &253049292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 253049293}
+  - component: {fileID: 253049294}
+  m_Layer: 5
+  m_Name: Gameobject_Happy_Black_White_Cat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &253049293
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253049292}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 621475633}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!212 &253049294
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253049292}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 5309512720379976984, guid: c8ff624a7ebe0e1418d12657774cd813, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.49, y: 0.48}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &288608775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,7 +1096,6 @@ GameObject:
   - component: {fileID: 288608776}
   - component: {fileID: 288608778}
   - component: {fileID: 288608777}
-  - component: {fileID: 288608779}
   m_Layer: 5
   m_Name: Image_Toy_Stamen_Color_Blue
   m_TagString: Untagged
@@ -1109,18 +1160,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288608775}
   m_CullTransparentMesh: 1
---- !u!225 &288608779
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288608775}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &324502232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1171,6 @@ GameObject:
   - component: {fileID: 324502233}
   - component: {fileID: 324502235}
   - component: {fileID: 324502234}
-  - component: {fileID: 324502236}
   m_Layer: 5
   m_Name: Image_Toy_Stamen_Color_Black
   m_TagString: Untagged
@@ -1197,18 +1235,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324502232}
   m_CullTransparentMesh: 1
---- !u!225 &324502236
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 324502232}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,7 +1340,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
-  orthographic: 1
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -1340,8 +1366,8 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 0.79669, y: 0.79669, z: 0.79669}
+  m_LocalPosition: {x: 493, y: 736, z: -990}
+  m_LocalScale: {x: 1.0952097, y: 0.79669, z: 0.79669}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1699,6 +1725,8 @@ RectTransform:
   - {fileID: 870149493}
   - {fileID: 1187294516}
   - {fileID: 2018896384}
+  - {fileID: 1382112963}
+  - {fileID: 253049293}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1730,7 +1758,6 @@ GameObject:
   - component: {fileID: 722175834}
   - component: {fileID: 722175833}
   - component: {fileID: 722175832}
-  - component: {fileID: 722175835}
   m_Layer: 5
   m_Name: Image_Sleeping_Black_White_Cat
   m_TagString: Untagged
@@ -1817,18 +1844,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722175830}
   m_CullTransparentMesh: 1
---- !u!225 &722175835
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722175830}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &739939452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,7 +1856,6 @@ GameObject:
   - component: {fileID: 739939456}
   - component: {fileID: 739939455}
   - component: {fileID: 739939454}
-  - component: {fileID: 739939457}
   m_Layer: 5
   m_Name: Image_Try_Sleep_Yellow_Cat
   m_TagString: Untagged
@@ -1928,18 +1942,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739939452}
   m_CullTransparentMesh: 1
---- !u!225 &739939457
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 739939452}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &780020339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,7 +1959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &780020340
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2223,8 +2225,6 @@ GameObject:
   - component: {fileID: 852364895}
   - component: {fileID: 852364897}
   - component: {fileID: 852364896}
-  - component: {fileID: 852364899}
-  - component: {fileID: 852364898}
   m_Layer: 5
   m_Name: Image_Toy_Black
   m_TagString: Untagged
@@ -2289,34 +2289,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852364894}
   m_CullTransparentMesh: 1
---- !u!225 &852364898
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852364894}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
---- !u!111 &852364899
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852364894}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
 --- !u!1 &855541814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,7 +2300,6 @@ GameObject:
   - component: {fileID: 855541815}
   - component: {fileID: 855541817}
   - component: {fileID: 855541816}
-  - component: {fileID: 855541818}
   m_Layer: 5
   m_Name: Image_Toy_Stamen_Color_Green
   m_TagString: Untagged
@@ -2393,18 +2364,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855541814}
   m_CullTransparentMesh: 1
---- !u!225 &855541818
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855541814}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &870149492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,7 +2375,6 @@ GameObject:
   - component: {fileID: 870149493}
   - component: {fileID: 870149495}
   - component: {fileID: 870149494}
-  - component: {fileID: 870149496}
   m_Layer: 5
   m_Name: Image_Bed_Blue
   m_TagString: Untagged
@@ -2481,18 +2439,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870149492}
   m_CullTransparentMesh: 1
---- !u!225 &870149496
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870149492}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &927641356
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,7 +2586,6 @@ GameObject:
   - component: {fileID: 980863798}
   - component: {fileID: 980863800}
   - component: {fileID: 980863799}
-  - component: {fileID: 980863801}
   m_Layer: 5
   m_Name: Image_Toy_Stamen_Color_Yellow
   m_TagString: Untagged
@@ -2705,18 +2650,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980863797}
   m_CullTransparentMesh: 1
---- !u!225 &980863801
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 980863797}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1003948367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,7 +2662,6 @@ GameObject:
   - component: {fileID: 1003948371}
   - component: {fileID: 1003948370}
   - component: {fileID: 1003948369}
-  - component: {fileID: 1003948372}
   m_Layer: 5
   m_Name: Image_Try_Sleep_Black_White_Cat
   m_TagString: Untagged
@@ -2816,18 +2748,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003948367}
   m_CullTransparentMesh: 1
---- !u!225 &1003948372
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1003948367}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1023369466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2840,14 +2760,13 @@ GameObject:
   - component: {fileID: 1023369470}
   - component: {fileID: 1023369469}
   - component: {fileID: 1023369468}
-  - component: {fileID: 1023369471}
   m_Layer: 5
   m_Name: Image_Sleeping_Yellow_Cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1023369467
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2927,18 +2846,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023369466}
   m_CullTransparentMesh: 1
---- !u!225 &1023369471
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023369466}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1038238186
 GameObject:
   m_ObjectHideFlags: 0
@@ -2950,7 +2857,6 @@ GameObject:
   - component: {fileID: 1038238187}
   - component: {fileID: 1038238189}
   - component: {fileID: 1038238188}
-  - component: {fileID: 1038238190}
   m_Layer: 5
   m_Name: Image_Toy_Gray
   m_TagString: Untagged
@@ -3015,18 +2921,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038238186}
   m_CullTransparentMesh: 1
---- !u!225 &1038238190
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038238186}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1049813828
 GameObject:
   m_ObjectHideFlags: 0
@@ -3038,7 +2932,6 @@ GameObject:
   - component: {fileID: 1049813829}
   - component: {fileID: 1049813831}
   - component: {fileID: 1049813830}
-  - component: {fileID: 1049813832}
   m_Layer: 5
   m_Name: Image_Toy_Stamen_Color_Gray
   m_TagString: Untagged
@@ -3103,18 +2996,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049813828}
   m_CullTransparentMesh: 1
---- !u!225 &1049813832
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049813828}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1054725051
 GameObject:
   m_ObjectHideFlags: 0
@@ -3126,7 +3007,6 @@ GameObject:
   - component: {fileID: 1054725052}
   - component: {fileID: 1054725054}
   - component: {fileID: 1054725053}
-  - component: {fileID: 1054725055}
   m_Layer: 5
   m_Name: Image_Toy_Stamen_Color_Purple
   m_TagString: Untagged
@@ -3191,18 +3071,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054725051}
   m_CullTransparentMesh: 1
---- !u!225 &1054725055
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054725051}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1060101608
 GameObject:
   m_ObjectHideFlags: 0
@@ -3290,14 +3158,13 @@ GameObject:
   - component: {fileID: 1077223803}
   - component: {fileID: 1077223802}
   - component: {fileID: 1077223801}
-  - component: {fileID: 1077223804}
   m_Layer: 5
   m_Name: Image_Sleeping_Yellow_Cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1077223800
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3377,18 +3244,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077223799}
   m_CullTransparentMesh: 1
---- !u!225 &1077223804
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1077223799}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1111047108
 GameObject:
   m_ObjectHideFlags: 0
@@ -3537,7 +3392,6 @@ GameObject:
   - component: {fileID: 1162688021}
   - component: {fileID: 1162688020}
   - component: {fileID: 1162688019}
-  - component: {fileID: 1162688022}
   m_Layer: 5
   m_Name: Image_Sad_Yellow_Cat
   m_TagString: Untagged
@@ -3624,18 +3478,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162688017}
   m_CullTransparentMesh: 1
---- !u!225 &1162688022
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162688017}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1170735071
 GameObject:
   m_ObjectHideFlags: 0
@@ -3723,7 +3565,6 @@ GameObject:
   - component: {fileID: 1186410838}
   - component: {fileID: 1186410837}
   - component: {fileID: 1186410836}
-  - component: {fileID: 1186410839}
   m_Layer: 5
   m_Name: Image_Sleeping_Black_White_Cat
   m_TagString: Untagged
@@ -3810,18 +3651,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186410834}
   m_CullTransparentMesh: 1
---- !u!225 &1186410839
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186410834}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1187294515
 GameObject:
   m_ObjectHideFlags: 0
@@ -3833,7 +3662,6 @@ GameObject:
   - component: {fileID: 1187294516}
   - component: {fileID: 1187294518}
   - component: {fileID: 1187294517}
-  - component: {fileID: 1187294519}
   m_Layer: 5
   m_Name: Image_Bed_White
   m_TagString: Untagged
@@ -3898,18 +3726,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187294515}
   m_CullTransparentMesh: 1
---- !u!225 &1187294519
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187294515}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1193527957
 GameObject:
   m_ObjectHideFlags: 0
@@ -4058,7 +3874,6 @@ GameObject:
   - component: {fileID: 1276184664}
   - component: {fileID: 1276184663}
   - component: {fileID: 1276184662}
-  - component: {fileID: 1276184665}
   m_Layer: 5
   m_Name: Image_Sad_Black_White_Cat
   m_TagString: Untagged
@@ -4145,18 +3960,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276184660}
   m_CullTransparentMesh: 1
---- !u!225 &1276184665
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276184660}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1356185425
 GameObject:
   m_ObjectHideFlags: 0
@@ -4279,6 +4082,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356185425}
   m_CullTransparentMesh: 1
+--- !u!1 &1382112962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1382112963}
+  - component: {fileID: 1382112964}
+  m_Layer: 5
+  m_Name: GameObject_Backgrouind_Wall_Game (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1382112963
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382112962}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 44.65937, y: 56.382454, z: 43.045174}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 621475633}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -397.09064, y: -868.43884}
+  m_SizeDelta: {x: 18.4751, y: 35.4803}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!212 &1382112964
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382112962}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -5585462969013869534, guid: 8777701be9bb1c745ae4aa05ca1f96e6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 18.004366, y: 31.98}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1421321495
 GameObject:
   m_ObjectHideFlags: 0
@@ -4759,7 +4653,6 @@ GameObject:
   - component: {fileID: 1566342289}
   - component: {fileID: 1566342291}
   - component: {fileID: 1566342290}
-  - component: {fileID: 1566342292}
   m_Layer: 5
   m_Name: Image_Toy_Stamen_Color_Brown
   m_TagString: Untagged
@@ -4824,18 +4717,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566342288}
   m_CullTransparentMesh: 1
---- !u!225 &1566342292
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566342288}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1589390319
 GameObject:
   m_ObjectHideFlags: 0
@@ -5259,7 +5140,6 @@ GameObject:
   - component: {fileID: 1776280978}
   - component: {fileID: 1776280980}
   - component: {fileID: 1776280979}
-  - component: {fileID: 1776280981}
   m_Layer: 5
   m_Name: Image_House
   m_TagString: Untagged
@@ -5324,18 +5204,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776280977}
   m_CullTransparentMesh: 1
---- !u!225 &1776280981
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1776280977}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1777717399
 GameObject:
   m_ObjectHideFlags: 0
@@ -5348,7 +5216,6 @@ GameObject:
   - component: {fileID: 1777717403}
   - component: {fileID: 1777717402}
   - component: {fileID: 1777717401}
-  - component: {fileID: 1777717404}
   m_Layer: 5
   m_Name: Image_Sleeping_Black_White_Cat
   m_TagString: Untagged
@@ -5435,18 +5302,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777717399}
   m_CullTransparentMesh: 1
---- !u!225 &1777717404
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1777717399}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1844583910
 GameObject:
   m_ObjectHideFlags: 0
@@ -5458,7 +5313,6 @@ GameObject:
   - component: {fileID: 1844583911}
   - component: {fileID: 1844583913}
   - component: {fileID: 1844583912}
-  - component: {fileID: 1844583914}
   m_Layer: 5
   m_Name: Image_Food
   m_TagString: Untagged
@@ -5523,18 +5377,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844583910}
   m_CullTransparentMesh: 1
---- !u!225 &1844583914
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844583910}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1857368361
 GameObject:
   m_ObjectHideFlags: 0
@@ -5805,14 +5647,13 @@ GameObject:
   - component: {fileID: 1899639642}
   - component: {fileID: 1899639641}
   - component: {fileID: 1899639640}
-  - component: {fileID: 1899639643}
   m_Layer: 5
   m_Name: Image_Sleeping_Yellow_Cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1899639639
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5892,18 +5733,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899639638}
   m_CullTransparentMesh: 1
---- !u!225 &1899639643
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1899639638}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1923298468
 GameObject:
   m_ObjectHideFlags: 0
@@ -5913,8 +5742,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1923298469}
+  - component: {fileID: 1923298470}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Button_GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5935,6 +5765,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1923298470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923298468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb6112b900836942b005b84c3e9acbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script_SetOnSetOffImages: {fileID: 2131661710}
+  button_Play: {fileID: 1589390321}
+  button_Food: {fileID: 1890710604}
+  button_Water: {fileID: 1421321497}
+  button_Sleep: {fileID: 1356185427}
+  images_CanvasGroup: {fileID: 41055991}
+  fadeDuration: 3.33
 --- !u!1 &2018896383
 GameObject:
   m_ObjectHideFlags: 0
@@ -5946,7 +5795,6 @@ GameObject:
   - component: {fileID: 2018896384}
   - component: {fileID: 2018896386}
   - component: {fileID: 2018896385}
-  - component: {fileID: 2018896387}
   m_Layer: 5
   m_Name: Image_Water
   m_TagString: Untagged
@@ -6011,18 +5859,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018896383}
   m_CullTransparentMesh: 1
---- !u!225 &2018896387
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018896383}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &2105767683
 GameObject:
   m_ObjectHideFlags: 0
@@ -6098,6 +5934,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105767683}
   m_CullTransparentMesh: 1
+--- !u!1 &2131661709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131661711}
+  - component: {fileID: 2131661710}
+  m_Layer: 5
+  m_Name: SetOffAndSetOn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2131661710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131661709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 264cdb3ae32df4c4488dde3817ea93b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_Happy_Yellow_Cat: {fileID: 41055989}
+  image_Happy_Black_White_Cat: {fileID: 187107372}
+  image_Sad_Yellow_Cat: {fileID: 1162688020}
+  image_Sad_Black_White_Cat: {fileID: 1276184663}
+  image_Try_Sleep_Yellow_Cat: {fileID: 739939455}
+  image_Try_Sleep_Black_White_Cat: {fileID: 1003948370}
+  image_Sleeping_Yellow_Cat_1: {fileID: 1899639641}
+  image_Sleeping_Black_White_Cat_1: {fileID: 1186410837}
+  image_Sleeping_Yellow_Cat_2: {fileID: 1023369469}
+  image_Sleeping_Black_White_Cat_2: {fileID: 1777717402}
+  image_Sleeping_Yellow_Cat_3: {fileID: 1077223802}
+  image_Sleeping_Black_White_Cat_3: {fileID: 722175833}
+  images_Random_Play_Button:
+  - {fileID: 1038238188}
+  - {fileID: 852364896}
+  - {fileID: 855541816}
+  - {fileID: 1054725053}
+  - {fileID: 288608777}
+  - {fileID: 74487833}
+  - {fileID: 980863799}
+  - {fileID: 324502234}
+  - {fileID: 87166084}
+  - {fileID: 1566342290}
+  - {fileID: 1049813830}
+  currentImageIs: {fileID: 739939455}
+  image_Food: {fileID: 1844583912}
+  image_Water: {fileID: 2018896385}
+  image_House: {fileID: 1776280979}
+  image_Bed_Blue: {fileID: 870149494}
+  image_Bed_White: {fileID: 1187294517}
+  script_ButtonsGameManager: {fileID: 1923298470}
+--- !u!224 &2131661711
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131661709}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.35, y: 1.35, z: 1.35}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 400.00003, y: 880.00006}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -6106,4 +6021,5 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 621475633}
   - {fileID: 1719594796}
+  - {fileID: 2131661711}
   - {fileID: 1923298469}
