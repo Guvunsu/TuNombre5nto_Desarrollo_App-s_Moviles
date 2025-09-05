@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class ButtonsGameManager : MonoBehaviour
 {
+    // actualizar los metodos de los botones
     #region Variables
 
     #region scripts heredables
@@ -63,22 +64,22 @@ public class ButtonsGameManager : MonoBehaviour
     }
     #endregion Yellow Cat
 
-   /* #region Black White Cat
+    /* #region Black White Cat
 
-    public void OnFoodPressed_Black_White_Cat()
-    {
-        script_SetOnSetOffImages.ActivationImageFromFoodButton_Yellow_Cat();
-    }
-    public void OnWaterPressed_Black_White_Cat()
-    {
-        script_SetOnSetOffImages.ActivationImageFromWaterButton_Yellow_Cat();
-    }
-    public void OnSleepPressed_Black_White_Cat()
-    {
-        script_SetOnSetOffImages.ActivationImageFromSleepButton_Yellow_Cat();
-    }
+     public void OnFoodPressed_Black_White_Cat()
+     {
+         script_SetOnSetOffImages.ActivationImageFromFoodButton_Yellow_Cat();
+     }
+     public void OnWaterPressed_Black_White_Cat()
+     {
+         script_SetOnSetOffImages.ActivationImageFromWaterButton_Yellow_Cat();
+     }
+     public void OnSleepPressed_Black_White_Cat()
+     {
+         script_SetOnSetOffImages.ActivationImageFromSleepButton_Yellow_Cat();
+     }
 
-    #endregion Black White Cat */
+     #endregion Black White Cat */
 
     #endregion Public Methods
 }

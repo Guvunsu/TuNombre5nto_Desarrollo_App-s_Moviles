@@ -5,8 +5,13 @@ using UnityEngine.Rendering;
 
 public class SetOnSetOffImages : MonoBehaviour
 {
-    //hacer toda la talacha de hacerlos gameobjects con spriterenderer 
     // modificar mi script para que sean gameobjects con sprites
+    // hacer que images_Random_Play_Button sea gameobjects y con random.range de GO
+    // a los objetos (items) sean gameobjects
+    //qu9itar coroutine y ienuramator
+    //CONSIDERAR una Animation
+    // modificar y cambiar nombres de metodos de activation para activar el object y desactivarlo despues de un yiel return waitingnewseconds
+   //opir y pegar en un nuevo script con un nombre debido y olvidar que eran images
     #region Variables 
 
     #region Variables Cats Image ElementsUI 
