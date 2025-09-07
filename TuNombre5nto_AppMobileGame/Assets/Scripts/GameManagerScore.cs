@@ -49,8 +49,6 @@ public class GameManagerScore : MonoBehaviour
         score_Happyness = Mathf.Max(score_Happyness - Score_Decay, score_Min);
         score_Satisfated = Mathf.Max(score_Satisfated - Score_Decay, score_Min);
         score_Sleepness = Mathf.Max(score_Sleepness - Score_Decay, score_Min);
-
-        Debug.Log($"↓ Scores | Happyness: {score_Happyness}, Satisfated: {score_Satisfated}, Sleepness: {score_Sleepness}");
         UpdateUI();
         IfScoreIsZero();
     }

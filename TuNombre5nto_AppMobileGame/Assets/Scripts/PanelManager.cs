@@ -26,7 +26,6 @@ public class PanelManager : MonoBehaviour
     public void DeathPanel()
     {
         panel_death.SetActive(true);
-        //panel_death.transform.parent = transform;
     }
     #endregion Dead Panel
 
