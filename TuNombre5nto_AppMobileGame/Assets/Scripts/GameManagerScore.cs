@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+//AGREGAR EL USING DE SCENEMANAGER
 
 public class GameManagerScore : MonoBehaviour
 {
