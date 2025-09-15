@@ -7,7 +7,7 @@ public class GameManagerButtons : MonoBehaviour
     #region scripts heredables
     public GameManagerActivationGameObjectsAndDesactivated script_GameManagerActivationGameObjectsAndDesactivated;
     public GameManagerScore script_GameManagerScore;
-  //  public PanelManager script_PanelManager;
+    //  public PanelManager script_PanelManager;
     #endregion scritps heredables
 
     #region Button
@@ -20,36 +20,31 @@ public class GameManagerButtons : MonoBehaviour
 
     #endregion Variables
 
-    #region Public Unity Methods
-    void Start()
-    {
-        button_Play.onClick.AddListener(OnPlayPressed);
-        button_Food.onClick.AddListener(OnFoodPressed);
-        button_Water.onClick.AddListener(OnWaterPressed);
-        button_Sleep.onClick.AddListener(OnSleepPressed);
-    }
-    #endregion Public Unity Methods
-
     #region Public Methods
 
     public void OnPlayPressed()
     {
-        script_GameManagerActivationGameObjectsAndDesactivated.ActivationFromPlayButton();
+        script_GameManagerActivationGameObjectsAndDesactivated.ActivationFromPlayOrSleepButton("Play");
         script_GameManagerScore.AddHappyness();
     }
     public void OnFoodPressed()
     {
-        script_GameManagerActivationGameObjectsAndDesactivated.ActivationFromFoodButton();
+        script_GameManagerActivationGameObjectsAndDesactivated.ActivationFromFoodOrWaterOrVaccineButton("Food");
         script_GameManagerScore.AddSatisfated();
     }
     public void OnWaterPressed()
     {
-        script_GameManagerActivationGameObjectsAndDesactivated.ActivationFromWaterButton();
+        script_GameManagerActivationGameObjectsAndDesactivated.ActivationFromFoodOrWaterOrVaccineButton("Water");
         script_GameManagerScore.AddSatisfated();
+    }
+    public void OnVaccinePressed()
+    {
+        script_GameManagerActivationGameObjectsAndDesactivated.ActivationFromFoodOrWaterOrVaccineButton("Vaccine");
+        script_GameManagerScore.Cure();
     }
     public void OnSleepPressed()
     {
-        script_GameManagerActivationGameObjectsAndDesactivated.ActivationFromSleepButton();
+        script_GameManagerActivationGameObjectsAndDesactivated.ActivationFromPlayOrSleepButton("Sleep");
         script_GameManagerScore.AddSleepness();
     }
 

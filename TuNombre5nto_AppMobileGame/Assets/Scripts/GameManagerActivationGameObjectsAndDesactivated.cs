@@ -1,3 +1,7 @@
+using System;
+using System.Collections;
+using Unity.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class GameManagerActivationGameObjectsAndDesactivated : MonoBehaviour
@@ -35,83 +39,91 @@ public class GameManagerActivationGameObjectsAndDesactivated : MonoBehaviour
     [SerializeField] GameObject[] GameObjects_Array_Toys;
     private GameObject currentObject_Toy;
 
-    [Header("Food & Water")]
+    [Header("Food || Water || Vaccine")]
     [SerializeField] GameObject foodObject;
     [SerializeField] GameObject waterObject;
+    [SerializeField] GameObject vaccineObject;
 
     [Header("Sleeping Objects")]
     [SerializeField] GameObject[] GameObject_Array_Beds;
     [SerializeField] GameObject currentObject_Bed;
     #endregion Variables Toys / Items
 
-    #region Timer
-    [Header("Timer Visible GameObjects In Screen")]
-    [SerializeField] float visibleTimeCurrentToy = 3.33f;
-    [SerializeField] float visibleTimeFoodObject = 3.33f;
-    [SerializeField] float visibleTimeCurrentBed = 3.33f;
-    [SerializeField] float visibleTimeWaterObject = 3.33f;
-    #endregion Timer
-
     #endregion Variables
 
     #region Public Methods
 
-    #region Activation Objects
-    public void Desactived3GameObjects()
+    #region Des/Activation Objects
+    public void ActivationFromFoodOrWaterOrVaccineButton(string textButton)
     {
-        currentObject_Toy.SetActive(false);
+        GameObject currentObjectIs = null;
         foodObject.SetActive(false);
         waterObject.SetActive(false);
-    }
-    public void ActivationFromPlayButton()
-    {
-        Debug.Log("Play Button activate");
 
-        foreach (var toy_Verification in GameObjects_Array_Toys)
+        if (textButton == "Food")
         {
-            toy_Verification.SetActive(false);
+            currentObjectIs = foodObject;
+        }
+        if (textButton == "Water")
+        {
+            currentObjectIs = waterObject;
+        }
+        if (textButton == "Vaccine")
+        {
+            currentObjectIs = vaccineObject;
         }
 
-        int random_Toy_Selection = Random.Range(0, GameObjects_Array_Toys.Length);
-        currentObject_Toy = GameObjects_Array_Toys[random_Toy_Selection];
-
-        currentObject_Toy.SetActive(true);
-        Invoke(nameof(Desactived3GameObjects), visibleTimeCurrentToy);
+        currentObjectIs.SetActive(true);
+        StartCoroutine(CurrentObjectDesactivation(currentObjectIs, 3.33f));
     }
-    public void ActivationFromFoodButton()
+    public void ActivationFromPlayOrSleepButton(string textButton)
     {
-        Debug.Log("Food Button activate");
-        if (!foodObject.activeSelf)
+        if (textButton == "Play")
         {
-            foodObject.SetActive(true);
-            Invoke(nameof(Desactived3GameObjects), visibleTimeFoodObject);
+            Debug.Log("Play Button activate");
+
+            foreach (var toy_Verification in GameObjects_Array_Toys)
+            {
+                toy_Verification.SetActive(false);
+            }
+            if (GameObjects_Array_Toys.Length > 0)
+            {
+                int random_Toy_Selection = UnityEngine.Random.Range(0, GameObjects_Array_Toys.Length);
+                currentObject_Toy = GameObjects_Array_Toys[random_Toy_Selection];
+
+                currentObject_Toy.SetActive(true);
+                StartCoroutine(CurrentObjectDesactivation(currentObject_Toy, 3.33f));
+            }
+        } else if (textButton == "Sleep")
+        {
+            Debug.Log("Sleep Button activate");
+            foreach (var bed_veriification in GameObject_Array_Beds)
+            {
+                bed_veriification.SetActive(false);
+            }
+            if (GameObject_Array_Beds.Length > 0)
+            {
+                int random_Bed_Selection = UnityEngine.Random.Range(0, GameObject_Array_Beds.Length);
+                currentObject_Bed = GameObject_Array_Beds[random_Bed_Selection];
+
+                currentObject_Bed.SetActive(true);
+                StartCoroutine(CurrentObjectDesactivation(currentObject_Bed, 3.33f));
+            }
         }
     }
-    public void ActivationFromWaterButton()
-    {
-        Debug.Log("Water Button activate");
-        if (!waterObject.activeSelf)
-        {
-            waterObject.SetActive(true);
-            Invoke(nameof(Desactived3GameObjects), visibleTimeWaterObject);
-        }
-    }
-    public void ActivationFromSleepButton()
-    {
-        Debug.Log("Sleep Button activate");
-        foreach (var bed_veriification in GameObject_Array_Beds)
-        {
-            bed_veriification.SetActive(false);
-        }
-
-        int random_Bed_Selection = Random.Range(0, GameObject_Array_Beds.Length);
-        currentObject_Bed = GameObject_Array_Beds[random_Bed_Selection];
-
-        currentObject_Bed.SetActive(true);
-        Invoke(nameof(Desactived3GameObjects), visibleTimeCurrentBed);
-    }
-
-    #endregion Activation Objects
+    #endregion Des/Activation Objects
 
     #endregion Public Methods
+
+    #region IEnumerator
+    public IEnumerator CurrentObjectDesactivation(GameObject currentObjectDesactivation, float visibleTimeCurrentObject)
+    {
+        yield return new WaitForSeconds(visibleTimeCurrentObject);
+        if (currentObjectDesactivation != null)
+        {
+            currentObjectDesactivation.SetActive(false);
+        }
+        print("Coroutine ended:" + Time.time + "Seconds");
+    }
+    #endregion IEnumerator
 }

@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -6,27 +8,33 @@ public class TimeManager : MonoBehaviour
     [Header("Configuración del Tiempo")]
     [SerializeField] TMP_Text timerText;
     [SerializeField] float decayTime = 1f;
-    private float timer;
-    private float totalTime;
+     float totalTime;
 
-    void Update()
+    public Action DecayTimer_Score;
+
+    void Start()
     {
-        TimeDecrased();
+        StartCoroutine(TickTackPum_Clock());
     }
     void UpdateTimerUI()
     {
-        int minutes = Mathf.FloorToInt(totalTime / 60f);
+        int hours = Mathf.FloorToInt(totalTime / 3600f);
+        int minutes = Mathf.FloorToInt(totalTime % 3600f / 60f);
         int seconds = Mathf.FloorToInt(totalTime % 60f);
-        timerText.text = $"{minutes:00}:{seconds:00}";
+        timerText.text = $"{hours:00}:{minutes:00}:{seconds:00}";
     }
-    public void TimeDecrased()
-    {     
-        totalTime += Time.deltaTime;
-        UpdateTimerUI();
-        timer += Time.deltaTime;
-        if (timer >= decayTime)
+    public void ResetearTiempo()
+    {
+        totalTime = 0f;
+    }
+    public IEnumerator TickTackPum_Clock()
+    {
+        while (true)
         {
-            timer = 0f;
+            yield return new WaitForSeconds(decayTime);
+            totalTime += decayTime;
+            UpdateTimerUI();
+            DecayTimer_Score.Invoke();
         }
     }
 }
