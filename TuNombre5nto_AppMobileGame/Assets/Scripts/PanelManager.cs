@@ -37,16 +37,16 @@ public class PanelManager : MonoBehaviour
     }
     public void PauseGame()
     {
+        pauseGame = !pauseGame;
         if (pauseGame)
-        {
-            Time.timeScale = 0;
-            panel_PauseGame.SetActive(true);
-            pauseGame = false;
-        } else
         {
             Time.timeScale = 1;
             panel_PauseGame.SetActive(false);
-            pauseGame = true;
+           
+        } else
+        {
+            Time.timeScale = 0;
+            panel_PauseGame.SetActive(true);
         }
     }
 
