@@ -19,6 +19,7 @@ public class LevelGenerator : MonoBehaviour
         for (int i = 0; i < numOfPlatform; i++)
         {
             spawnPos = PlacePlatform(spawnPos);
+            Instantiate(platformPrefab, spawnPos, Quaternion.identity);
             GameObject platform = Instantiate(platformPrefab, spawnPos, Quaternion.identity);
             platformPool.Add(platform);
         }
