@@ -3,7 +3,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Vector3 dragStartPos;
+    Vector3 horizontal;
     Touch touch;
+    [SerializeField] float speed = 2.0f;
+    Rigidbody2D rb;
     void Update()
     {
         if (Input.touchCount > 0)
@@ -31,11 +34,23 @@ public class PlayerController : MonoBehaviour
 
     void Dragging()
     {
+        horizontal = new Vector3(transform.position.x + dragStartPos.x, 0, 0).normalized;
+        if (horizontal.x > 0)
+        {
+            rb.linearVelocityX = dragStartPos.x * speed * Time.deltaTime;
+            Debug.Log("Derecha");
+        }
+        else if (horizontal.x < 0)
+        {
+            rb.linearVelocityX = dragStartPos.x * speed * Time.deltaTime;
+            Debug.Log("Izquierda");
+        }
         Debug.Log(Camera.main.ScreenToWorldPoint(dragStartPos));
     }
 
     void DragRelease()
     {
+        rb.linearVelocityX = 0;
         Debug.Log("Termine de a tocar");
 
     }

@@ -1,7 +1,7 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class DistanceJumpManager : MonoBehaviour
+public class ScoreCoins : MonoBehaviour
 {
     [Header("Puntuación")]
     public int scoreDistance;
@@ -30,6 +30,7 @@ public class DistanceJumpManager : MonoBehaviour
     void UpdateScorenUI()
     {
         if (scoreGeneral != null)
-            scoreGeneral.text = "x " + scoreCoins.ToString();
+            scoreGeneral.text = "" + scoreCoins.ToString();
     }
+
 }

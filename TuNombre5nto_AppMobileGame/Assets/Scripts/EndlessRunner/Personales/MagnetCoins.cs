@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class MagnetCoins : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // le puse trigger para la colision del jugador con el powerup
+
     void Start()
     {
-        
+      
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Player"))
+        {
         
+        }
     }
 }

@@ -9,8 +9,12 @@ public class DeadMomentWhenYouFall : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            script_PanelesManagers.DeathPanel();
-            playerAvatar.SetActive(false);
+            DeadPlayer();
         }
+    }
+    public void DeadPlayer()
+    {
+        script_PanelesManagers.DeathPanel();
+        playerAvatar.SetActive(false);
     }
 }

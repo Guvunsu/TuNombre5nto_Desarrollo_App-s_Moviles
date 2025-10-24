@@ -12,8 +12,7 @@ public class CoinsManager : MonoBehaviour
     [SerializeField] float maxY = 1.5f;
 
     [Header("Referencias")]
-
-    public DistanceJumpManager script_DistanceJumpManager;
+    public ScoreCoins script_ScoreCoins;
 
     [Header("Lista GO")]
     [SerializeField] public List<GameObject> spawnedCoins = new List<GameObject>();
@@ -24,6 +23,7 @@ public class CoinsManager : MonoBehaviour
         for (int i = 0; i < numberCoinsCanSpawn; i++)
         {
             spawnPos = PlaceCoins(spawnPos);
+            Instantiate(goldCoinPrefab, spawnPos, Quaternion.identity);
             GameObject coin = Instantiate(goldCoinPrefab, spawnPos, Quaternion.identity);
             spawnedCoins.Add(coin);
         }

@@ -13,7 +13,7 @@ public class Coin : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            script_CoinsManager.script_DistanceJumpManager.AddCoinScore();
+            script_CoinsManager.script_ScoreCoins.AddCoinScore();
             script_CoinsManager.RepositionCoin(gameObject);
         }
     }

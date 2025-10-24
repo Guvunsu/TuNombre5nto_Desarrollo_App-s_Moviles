@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 42d8c046b070c4043963f0dc5cf244f8
+guid: 1f60293cd5feab743848e4f652922ff1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5448800783134307884
-    second: 184-1841897_magnet-magnet-icon-png-transparent-png_0
+      213: 1706087278266853520
+    second: pngimg.com - magnet_PNG17036_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 184-1841897_magnet-magnet-icon-png-transparent-png_0
+      name: pngimg.com - magnet_PNG17036_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 860
-        height: 901
+        x: 132
+        y: 115
+        width: 1073
+        height: 984
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c26379a71770e9b40800000000000000
-      internalID: 5448800783134307884
+      spriteID: 098a8e0275d3da710800000000000000
+      internalID: 1706087278266853520
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      184-1841897_magnet-magnet-icon-png-transparent-png_0: 5448800783134307884
+      pngimg.com - magnet_PNG17036_0: 1706087278266853520
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
