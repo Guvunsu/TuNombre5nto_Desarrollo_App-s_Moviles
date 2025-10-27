@@ -2,15 +2,28 @@ using UnityEngine;
 
 public class LavaPlatgorm : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [Header("Referencias")]
+    [SerializeField] GameObject playerAvatar;
+    [SerializeField] GameObject panelesManagersObject;
+
+    PanelesManagers panelesManagers;
+
+    void Awake()
     {
-        
+        if (panelesManagersObject != null)
+            panelesManagers = panelesManagersObject.GetComponent<PanelesManagers>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.collider.CompareTag("Player"))
+        {
+            if (panelesManagers != null && playerAvatar != null)
+            {
+                panelesManagers.DeathPanel();
+                playerAvatar.SetActive(false);
+            } else
+                collision.gameObject.SetActive(false);
+        }
     }
 }

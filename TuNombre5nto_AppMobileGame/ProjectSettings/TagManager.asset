@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Platform
   - Coin
+  - lavaPlatform
+  - icePlatform
+  - powerUpMagnet
+  - Mirror
   layers:
   - Default
   - TransparentFX
