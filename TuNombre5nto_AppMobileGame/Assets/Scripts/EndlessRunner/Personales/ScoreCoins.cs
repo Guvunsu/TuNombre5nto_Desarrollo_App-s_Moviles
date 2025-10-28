@@ -17,7 +17,7 @@ public class ScoreCoins : MonoBehaviour
         scoreCoins = 0;
 
         // Carga el récord anterior guardado
-        highScore = PlayerPrefs.GetInt("HighScoreCoins", 0);
+        highScore = PlayerPrefs.GetInt("HighScore", 0);
 
         UpdateScorenUI();
     }
@@ -41,7 +41,7 @@ public class ScoreCoins : MonoBehaviour
         if (scoreCoins > highScore)
         {
             highScore = scoreCoins;
-            PlayerPrefs.SetInt("HighScoreCoins", highScore);
+            PlayerPrefs.SetInt("HighScore", highScore);
             PlayerPrefs.Save();
         }
     }

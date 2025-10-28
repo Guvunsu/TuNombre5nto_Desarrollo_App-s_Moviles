@@ -7,6 +7,10 @@ public class PlayerController : MonoBehaviour
     Touch touch;
     [SerializeField] float speed = 2.0f;
     Rigidbody2D rb;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     void Update()
     {
         if (Input.touchCount > 0)
@@ -29,7 +33,8 @@ public class PlayerController : MonoBehaviour
     void DragStart()
     {
         Debug.Log("Empeze a tocar");
-        dragStartPos = Camera.main.ScreenToWorldPoint(dragStartPos);
+        dragStartPos = Camera.main.ScreenToWorldPoint(touch.position);
+
     }
 
     void Dragging()
