@@ -23,7 +23,6 @@ public class DuplicatePlayerManager : MonoBehaviour
         for (int i = 0; i < numberDuplicatePlayerCanSpawn; i++)
         {
             spawnPos = PlaceDuplicatePlayer(spawnPos);
-            // mantengo tu doble Instantiate como estaba
             Instantiate(duplicatePlayerPrefab, spawnPos, Quaternion.identity);
             GameObject duplicate = Instantiate(duplicatePlayerPrefab, spawnPos, Quaternion.identity);
             spawnedDuplicatePlayer.Add(duplicate);
@@ -49,12 +48,9 @@ public class DuplicatePlayerManager : MonoBehaviour
     public void SpawnDuplicate(Transform originalPlayerTransform)
     {
         if (duplicatePlayerPrefab == null || originalPlayerTransform == null) return;
-
-        // spawn cerca del original (o donde quieras); aquí lo spawnamos con un offset en X y Y
-        Vector3 spawnPos = originalPlayerTransform.position + new Vector3(1.0f, 0.0f, 0f);
+        Vector3 spawnPos = originalPlayerTransform.position + new Vector3(1.0f, 1.0f, 0f);
         GameObject clone = Instantiate(duplicatePlayerPrefab, spawnPos, Quaternion.identity);
 
-        // Si el prefab tiene ClonePlayerController lo configuramos para seguir al original
         ClonePlayerController cloneCtrl = clone.GetComponent<ClonePlayerController>();
         Rigidbody2D originalRb = originalPlayerTransform.GetComponent<Rigidbody2D>();
         if (cloneCtrl != null)
@@ -62,11 +58,7 @@ public class DuplicatePlayerManager : MonoBehaviour
             cloneCtrl.originalPlayerTransform = originalPlayerTransform;
             cloneCtrl.originalRb = originalRb;
         }
-
-        // Añadir a la lista (si quieres rastrearlos)
         spawnedDuplicatePlayer.Add(clone);
-
-        // Opcional: destruir el clon después de cierto tiempo si deseas (ejemplo 10s)
         Destroy(clone, 10f);
     }
 }

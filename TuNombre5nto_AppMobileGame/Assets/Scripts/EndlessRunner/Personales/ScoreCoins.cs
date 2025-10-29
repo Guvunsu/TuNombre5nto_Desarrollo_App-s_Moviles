@@ -9,16 +9,12 @@ public class ScoreCoins : MonoBehaviour
 
     [Header("UI Score")]
     [SerializeField] TMP_Text scoreGeneral;
-    [SerializeField] TMP_Text highScoreText; // opcional, para mostrar el récord
+    [SerializeField] TMP_Text highScoreText; 
 
     void Start()
     {
-        // Reinicia el puntaje actual al iniciar partida
         scoreCoins = 0;
-
-        // Carga el récord anterior guardado
         highScore = PlayerPrefs.GetInt("HighScore", 0);
-
         UpdateScorenUI();
     }
 
@@ -37,7 +33,6 @@ public class ScoreCoins : MonoBehaviour
 
     void CheckHighScore()
     {
-        // Si el puntaje actual supera el récord, actualízalo
         if (scoreCoins > highScore)
         {
             highScore = scoreCoins;

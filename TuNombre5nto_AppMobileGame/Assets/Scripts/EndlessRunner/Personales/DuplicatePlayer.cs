@@ -14,10 +14,7 @@ public class DuplicatePlayer : MonoBehaviour
     {
         if (collision.CompareTag("Player") && script_DuplicatePlayerManager != null)
         {
-            // Pedimos al manager que genere un clon que siga al jugador
             script_DuplicatePlayerManager.SpawnDuplicate(collision.transform);
-
-            // Reposicionar o destruir el power-up para reciclarlo
             script_DuplicatePlayerManager.RepositionDuplicatePlayer(gameObject);
         }
     }

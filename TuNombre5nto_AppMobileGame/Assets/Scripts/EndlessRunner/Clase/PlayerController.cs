@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
-{
+{//para que esto funcione se debe de conbinar ambos inputs el viejo y el nuevo
     Vector3 dragStartPos;
     Vector3 horizontal;
     Touch touch;
