@@ -2385,6 +2385,7 @@ GameObject:
   - component: {fileID: 1430503481}
   - component: {fileID: 1430503483}
   - component: {fileID: 1430503482}
+  - component: {fileID: 1430503484}
   m_Layer: 5
   m_Name: Image 3
   m_TagString: Untagged
@@ -2449,6 +2450,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430503480}
   m_CullTransparentMesh: 1
+--- !u!114 &1430503484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430503480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c234aca4b1d547e4f9d85b40f355f140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragOnSurfaces: 1
 --- !u!1 &1604915769
 GameObject:
   m_ObjectHideFlags: 0
@@ -4696,7 +4710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1854993912}
-  - component: {fileID: 1854993911}
+  - component: {fileID: 1854993913}
   m_Layer: 0
   m_Name: PlacementSystem
   m_TagString: Untagged
@@ -4704,18 +4718,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1854993911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854993910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 525bd016ed84b5b49a73160ea597fb95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1854993912
 Transform:
   m_ObjectHideFlags: 0
@@ -4731,6 +4733,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1854993913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854993910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea14b3757e7e39c4392d3d2f00112c74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cube: {fileID: 554669656}
+  blockPrefab: {fileID: 554669656}
+  mouseIndicator: {fileID: 2048054510}
+  m_Grid: {fileID: 46791023}
+  gridInput: {fileID: 1099533326}
+  turrentMap: {fileID: 1604915769}
 --- !u!1 &1931273708
 GameObject:
   m_ObjectHideFlags: 0
@@ -4742,6 +4762,7 @@ GameObject:
   - component: {fileID: 1931273709}
   - component: {fileID: 1931273711}
   - component: {fileID: 1931273710}
+  - component: {fileID: 1931273712}
   m_Layer: 5
   m_Name: Image 1
   m_TagString: Untagged
@@ -4806,6 +4827,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931273708}
   m_CullTransparentMesh: 1
+--- !u!114 &1931273712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931273708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c234aca4b1d547e4f9d85b40f355f140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragOnSurfaces: 1
 --- !u!1 &2012028413
 GameObject:
   m_ObjectHideFlags: 0
@@ -4817,6 +4851,7 @@ GameObject:
   - component: {fileID: 2012028414}
   - component: {fileID: 2012028416}
   - component: {fileID: 2012028415}
+  - component: {fileID: 2012028417}
   m_Layer: 5
   m_Name: Image 2
   m_TagString: Untagged
@@ -4881,6 +4916,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012028413}
   m_CullTransparentMesh: 1
+--- !u!114 &2012028417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012028413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c234aca4b1d547e4f9d85b40f355f140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragOnSurfaces: 1
 --- !u!1 &2048054510
 GameObject:
   m_ObjectHideFlags: 0
@@ -4979,6 +5027,7 @@ GameObject:
   - component: {fileID: 2140164334}
   - component: {fileID: 2140164336}
   - component: {fileID: 2140164335}
+  - component: {fileID: 2140164337}
   m_Layer: 5
   m_Name: Image 4
   m_TagString: Untagged
@@ -5043,6 +5092,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140164333}
   m_CullTransparentMesh: 1
+--- !u!114 &2140164337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140164333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c234aca4b1d547e4f9d85b40f355f140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragOnSurfaces: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
