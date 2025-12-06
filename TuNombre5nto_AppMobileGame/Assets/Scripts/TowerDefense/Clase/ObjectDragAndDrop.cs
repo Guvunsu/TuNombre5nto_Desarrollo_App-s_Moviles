@@ -36,6 +36,7 @@ public class ObjectDragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler,
 
         SetDraggedPosition(eventData);
         // cabiar el icono que indica que objeto estamos arrastrando a la pantalla 
+        PlacementSystem.Instance.SetTowerSprite(image.sprite);   
     }
     public void OnDrag(PointerEventData data)
     {
@@ -48,7 +49,7 @@ public class ObjectDragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler,
     {
         if (dragOnSurfaces && data.pointerEnter != null && data.pointerEnter.transform as RectTransform != null)
         {
-            m_dragingPlane = data.pointerEnter.transform as RectTransform;
+            m_dragingPlane = data.pointerEnter.transform as RectTransform; 
             var rt = m_DragingIcon.GetComponent<RectTransform>();
             Vector3 globalMousePos;
             if (RectTransformUtility.ScreenPointToWorldPointInRectangle(m_dragingPlane, data.position, data.pressEventCamera, out globalMousePos))
@@ -62,7 +63,7 @@ public class ObjectDragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler,
     {
         if (m_DragingIcon != null)
         {
-            PlacementSystem.instance.CreateObject();
+            PlacementSystem.Instance.CreateObject();
             Destroy(m_DragingIcon);
 
         }

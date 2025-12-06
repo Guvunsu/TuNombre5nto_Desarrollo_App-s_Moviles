@@ -8,7 +8,7 @@ public class GameManagerScore : MonoBehaviour
     #region scripts 
     public PanelManager script_PanelManager;
     public TimeManager script_TimeManager;
-    public MenuManager script_MenuManager;
+    //public MenuManager script_MenuManager;
     public SaveAndDeleateAllPreferencesPlayer script_SaveAndDeleateAllPreferencesPlayer;
     #endregion scritps
 
