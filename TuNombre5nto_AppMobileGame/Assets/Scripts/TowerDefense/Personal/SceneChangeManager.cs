@@ -11,12 +11,17 @@ public class SceneChangeManager : MonoBehaviour
     [SerializeField] Button Load_GameLevel3;
     [SerializeField] GameObject continueGame;
     [SerializeField] GameObject pauseGame;
+    [SerializeField] GameObject gameOver;
     [SerializeField] Button continueG;
     [SerializeField] Button exit;
+    public void GameOver()
+    {
+        gameOver.SetActive(true);
+    }
     public void PauseGame()
     {
         pauseGame.SetActive(true);
-    }
+    }   
     public void ContinueGame()
     {
         pauseGame.SetActive(false);
