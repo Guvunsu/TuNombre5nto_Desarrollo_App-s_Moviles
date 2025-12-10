@@ -1,38 +1,49 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class SceneChangeManager : MonoBehaviour
 {
     [Header("Paneles")]
-    [SerializeField] GameObject panel_MenuGame;
-    [SerializeField] GameObject panel_MenuLevel;
-    [SerializeField] GameObject panel_GameLevel1;
-    [SerializeField] GameObject panel_GameLevel2;
-    [SerializeField] GameObject panel_GameLevel3;
-
-    public void ChangeLevelOne()
+    [SerializeField] Button Load_MenuGame;
+    [SerializeField] Button Load_MenuLevels;
+    [SerializeField] Button Load_GameLevel1;
+    [SerializeField] Button Load_GameLevel2;
+    [SerializeField] Button Load_GameLevel3;
+    [SerializeField] GameObject continueGame;
+    [SerializeField] GameObject pauseGame;
+    [SerializeField] Button continueG;
+    [SerializeField] Button exit;
+    public void PauseGame()
     {
-        panel_GameLevel1.SetActive(true);
-        panel_GameLevel2.SetActive(false);
-        panel_GameLevel3.SetActive(false);
+        pauseGame.SetActive(true);
     }
-    public void ChangeLevelTwo()
+    public void ContinueGame()
     {
-        panel_GameLevel1.SetActive(false);
-        panel_GameLevel2.SetActive(true);
-        panel_GameLevel3.SetActive(false);
+        pauseGame.SetActive(false);
     }
-    public void ChangeLevelThree()
+    public void LoadLevelOne()
     {
-        panel_GameLevel1.SetActive(false);
-        panel_GameLevel2.SetActive(false);
-        panel_GameLevel3.SetActive(true);
+        SceneManager.LoadScene("LevelOne");
     }
-    public void MenuLevels()
+    public void LoadLevelTwo()
     {
-        panel_MenuLevel.SetActive(true);
+        SceneManager.LoadScene("LevelTwo");
     }
-    public void MenuGame()
+    public void LoadLevelThree()
     {
-        panel_MenuGame.SetActive(true);
+        SceneManager.LoadScene("LevelThree");
+    }
+    public void LoadMenuPrincipal()
+    {
+        SceneManager.LoadScene("MenuGame");
+    }
+    public void LoadMenuLevels()
+    {
+        SceneManager.LoadScene("MenuLevels");
+    }
+    public void QuitGame()
+    {
+        //UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 }
