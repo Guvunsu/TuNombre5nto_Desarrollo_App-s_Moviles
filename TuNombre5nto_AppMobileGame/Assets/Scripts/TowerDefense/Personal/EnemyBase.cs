@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using JetBrains.Annotations;
 
 public class EnemyBase : MonoBehaviour
 {
@@ -115,7 +116,10 @@ public class EnemyBase : MonoBehaviour
                 tower.TakeDamage(damageToTower);
         }
 
-        if (collision.CompareTag("Heart"))
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Heart"))
         {
             fsm_UFO = UFO_FSM.HIT;
 

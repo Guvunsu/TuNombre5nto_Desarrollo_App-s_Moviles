@@ -137,24 +137,22 @@ public class TowerBase : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             TakeDamage(10);
-            Debug.Log("UFO detectado: " + collision.name);
-        }
+            Debug.Log("UFO detectado: " + collision.gameObject);
+        } 
     }
-
-    private void OnTriggerExit2D(Collider2D collision)
+    public void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             TakeDamage(10);
             Debug.Log("UFO salió del rango");
-        }
+        }   
     }
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

@@ -4,7 +4,10 @@ using UnityEngine.InputSystem;
 public class PlacementSystem : MonoBehaviour
 {
     public static PlacementSystem Instance { get; private set; }
-    public GameObject cube, blockPrefab, mouseIndicator;
+    public GameObject cube, mouseIndicator;
+    public GameObject mageTower;
+    public GameObject archTower;
+    public GameObject warriorTower;
     public Grid m_grid;
     //public GridTestInput gridInput;
     public GameObject turretMap;
@@ -19,7 +22,8 @@ public class PlacementSystem : MonoBehaviour
         if (Instance != null && Instance != this)
         {
             Destroy(Instance);
-        } else
+        }
+        else
         {
             Instance = this;
         }
@@ -71,17 +75,19 @@ public class PlacementSystem : MonoBehaviour
         if (DoNotCollideWithOtherObject())
         {
             CreateObject();
-        } else
+        }
+        else
         {
             Debug.Log("Can't build!");
             //Aquí puedes agregar acciones cuando no se construyan torretas.
         }
-
     }
 
     public void CreateObject()
     {
-        GameObject newObject = Instantiate(blockPrefab, cube.transform.position, Quaternion.identity);
+        GameObject newObject = Instantiate(mageTower, cube.transform.position, Quaternion.identity);
+        GameObject newObject2 = Instantiate(archTower, cube.transform.position, Quaternion.identity);
+        GameObject newObject3 = Instantiate(warriorTower, cube.transform.position, Quaternion.identity);
         newObject.transform.SetParent(turretMap.transform);
     }
 
@@ -93,14 +99,17 @@ public class PlacementSystem : MonoBehaviour
         {
             Debug.Log("Can't build over " + hit.collider.gameObject.name);
             return false;
-        } else
+        }
+        else
         { return true; }
     }
 
     public void SetTowerSprite(Sprite towerSprite)
     {
         //
-        blockPrefab.gameObject.GetComponent<SpriteRenderer>().sprite = towerSprite;
+        mageTower.gameObject.GetComponent<SpriteRenderer>().sprite = towerSprite;
+        archTower.gameObject.GetComponent<SpriteRenderer>().sprite = towerSprite;
+        warriorTower.gameObject.GetComponent<SpriteRenderer>().sprite = towerSprite;
         mouseIndicator.gameObject.GetComponent<SpriteRenderer>().sprite = towerSprite;
     }
 }
