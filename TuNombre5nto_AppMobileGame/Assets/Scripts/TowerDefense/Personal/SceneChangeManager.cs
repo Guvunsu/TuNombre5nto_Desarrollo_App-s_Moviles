@@ -21,10 +21,12 @@ public class SceneChangeManager : MonoBehaviour
     public void PauseGame()
     {
         pauseGame.SetActive(true);
+        Time.timeScale = 0f;
     }   
     public void ContinueGame()
     {
         pauseGame.SetActive(false);
+        Time.timeScale = 1f;
     }
     public void LoadLevelOne()
     {

@@ -10,6 +10,8 @@ TagManager:
   - icePlatform
   - powerUpMagnet
   - Mirror
+  - Heart
+  - Enemy
   layers:
   - Default
   - TransparentFX

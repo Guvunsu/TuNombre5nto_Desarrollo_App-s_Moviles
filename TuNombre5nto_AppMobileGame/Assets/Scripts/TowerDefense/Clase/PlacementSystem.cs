@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlacementSystem : MonoBehaviour
@@ -74,8 +74,9 @@ public class PlacementSystem : MonoBehaviour
         } else
         {
             Debug.Log("Can't build!");
-            //Aqu� puedes agregar acciones cuando no se construyan torretas.
+            //Aquí puedes agregar acciones cuando no se construyan torretas.
         }
+
     }
 
     public void CreateObject()
